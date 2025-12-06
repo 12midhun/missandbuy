@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/* NAVBAR */
+header{
+    width:100%;
+    background:#ffffff;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+body {
+    background-image: url("Bgblack.webp");
+    background-size: cover;     /* Full screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+
+}
+
+
+
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:black;
+   
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-size:16px;
+}
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* SLIDER */
+.slider{
+    width:100%;
+    margin-top:10px;
+    height:70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slide{
+    width:100%;
+    height:100%;
+    position:absolute;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.slide .text{
+    position:absolute;
+    Top:40px;
+    left:40px;
+    background:black;
+    color:white;
+    padding:10px 20px;
+    font-size:22px;
+    border-radius:5px;
+}
+
+/* PRODUCTS */
+.products{
+    padding:40px;
+}
+
+.products h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color: aqua;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.comment{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer{
+    padding:15px;
+    background:#000;
+    color:white;
+    text-align:center;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    nav ul{
+        display:none;
+        flex-direction:column;
+        background:white;
+        width:100%;
+        padding:20px;
+        position:absolute;
+        top:70px;
+        left:0;
+        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
