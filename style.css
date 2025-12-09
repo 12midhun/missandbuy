@@ -21,8 +21,10 @@ header{
 }
 
 body {
-    background-image: url("Bgblack.webp");
-    background-image: url("confetti.png");
+    background-image: 
+        url("confetti.png"),      /* top layer */
+        url("Bgblack.webp");   /* bottom layer */
+
     background-size: cover;     /* Full screen */
     background-repeat: no-repeat;
     background-position: center;
@@ -30,7 +32,6 @@ body {
     background-attachment: fixed;
 
 }
-
 
 
 .carousel-control-prev,
